@@ -16,9 +16,11 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
 
-      - run: cargo build --release --bin schema-engine
+      - run: cargo build --release --bin schema-engine --target x86_64-unknown-linux-gnu
+      - run: tar czf archive.tar.gz target/x86_64-unknown-linux-gnu
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: target/release/schema-engine
+          files: archive.tar.gz
           tag_name: latest

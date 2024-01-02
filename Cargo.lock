@@ -4568,6 +4568,7 @@ dependencies = [
  "expect-test",
  "indoc 2.0.3",
  "jsonrpc-core",
+ "openssl",
  "quaint",
  "schema-connector",
  "schema-core",

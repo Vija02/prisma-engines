@@ -22,6 +22,8 @@ jobs:
           path: /app/target/x86_64-unknown-linux-gnu/release/schema-engine
           destination: dist
 
+      - run: ls -al
+
       # - name: Upload Dist
       #   uses: actions/upload-artifact@v3
       #   with:

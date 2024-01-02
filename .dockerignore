@@ -1,0 +1,58 @@
+db/*
+!.placeholder
+.DS_Store
+current_connector
+prisma-gpg-private.asc
+.test_config
+*.pending-snap
+.pending.md
+
+*.class
+*.log
+.coursier
+.ivy2
+
+# Idea
+.iml
+.idea
+.idea_modules
+
+# test files
+/schema
+/request.json
+/docker.env
+/docker-compose.tests.yml
+
+# buildkite artifacts
+buildkite-script-*
+
+# VSCode specific
+.vscode/
+
+# Nix specific
+.direnv/
+/.envrc.local
+nixos.qcow2
+
+# Dev setup
+datamodel_v2.prisma
+dev_datamodel.prisma
+.tmp/
+/target/
+/target-alternatives/
+/result
+
+dmmf.json
+graph.dot
+
+prisma-schema-wasm/nodejs
+
+# Ignore pnpm-lock.yaml
+query-engine/driver-adapters/pnpm-lock.yaml
+package-lock.json
+
+# Useful for local wasm32-* development
+.cargo/
+
+# Human readable Wasm output
+*.wat

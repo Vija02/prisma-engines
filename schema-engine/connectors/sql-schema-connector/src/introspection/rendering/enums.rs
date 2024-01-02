@@ -62,9 +62,9 @@ fn render_enum(r#enum: EnumPair<'_>) -> renderer::Enum<'_> {
             rendered_variant.map(map);
         }
 
-        if variant.name().is_empty() || sanitize_datamodel_names::needs_sanitation(&variant.name()) {
-            rendered_variant.comment_out();
-        }
+        // if variant.name().is_empty() || sanitize_datamodel_names::needs_sanitation(&variant.name()) {
+        //     rendered_variant.comment_out();
+        // }
 
         rendered_enum.push_variant(rendered_variant);
     }

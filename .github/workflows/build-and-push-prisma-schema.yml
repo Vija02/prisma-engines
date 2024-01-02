@@ -20,5 +20,5 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: schema-engine
+          files: target/release/schema-engine
           tag_name: latest

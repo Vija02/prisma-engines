@@ -20,10 +20,10 @@ jobs:
         with:
           image: my-image:latest
           path: /app/target/x86_64-unknown-linux-gnu/release/schema-engine
-          destination: schema-engine
+          destination: dist
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: schema-engine
+          files: dist/schema-engine
           tag_name: latest

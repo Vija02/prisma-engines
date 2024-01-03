@@ -20,26 +20,10 @@ jobs:
         with:
           image: my-image:latest
           path: /app/target/x86_64-unknown-linux-gnu/release/schema-engine
-          destination: dist
-
-      - run: ls -al
-
-      # - name: Upload Dist
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     path: dist
-
-      # - uses: actions-rs/toolchain@v1
-      #   with:
-      #     toolchain: stable
-
-      # - uses: Swatinem/rust-cache@v2
-
-      # - run: cargo build --release --bin schema-engine --target x86_64-unknown-linux-gnu
-      # - run: tar czf archive.tar.gz target/x86_64-unknown-linux-gnu
+          destination: schema-engine
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist
+          files: schema-engine
           tag_name: latest
